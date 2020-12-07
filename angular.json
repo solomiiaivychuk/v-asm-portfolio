@@ -120,9 +120,16 @@
               "devServerTarget": "blog:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
   },
-  "defaultProject": "blog"
+  "defaultProject": "blog",
+  "cli": {
+    "analytics": "d7c20c43-f773-49b7-8579-5a201c3375a7"
+  }
 }
