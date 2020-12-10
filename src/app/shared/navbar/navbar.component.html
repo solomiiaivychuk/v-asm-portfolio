@@ -1,15 +1,23 @@
-<mat-toolbar color="primary">
-
+<mat-toolbar color="primary" class="navbar">
   <mat-toolbar-row>
-    <span>portfolio</span>
+    <span class="navbar-header glow">photos by vitalii asmakovskyi</span>
     <span class="spacer"></span>
     <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
       <span>welcome back, {{user.displayName | lowercase }}</span>
       <button mat-button (click)="auth.logout()">logout</button>
     </div>
     <ng-template #showLogin>
-      <button mat-button (click)="auth.login()">login with google</button>
+      <button mat-button (click)="auth.login()">login</button>
     </ng-template>
+  </mat-toolbar-row>
+<!---->
+  <mat-toolbar-row class="navbar-row">
+    <div class="navbar-buttons">
+      <button mat-button>my portfolio</button>
+      <button mat-button>people</button>
+      <button mat-button>places</button>
+      <button mat-button>contact me</button>
+    </div>
   </mat-toolbar-row>
 
 </mat-toolbar>

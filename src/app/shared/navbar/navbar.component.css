@@ -1,3 +1,47 @@
 .spacer {
   flex: 1 1 auto;
 }
+.navbar {
+  font-family: 'Pathway Gothic One', sans-serif;
+  padding: 1.5rem;
+
+}
+button {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 1.5rem;
+}
+button:hover {
+  text-shadow: 
+  0 0 1px #fff, 
+  0 0 2px #fff, 
+  0 0 3px #FFAB91, 
+  0 0 4px #FFAB91, 
+  0 0 5px #FFAB91, 
+  0 0 6px #FFAB91, 
+  0 0 7px #FFAB91;
+}
+.navbar-header {
+  font-size: 3rem;
+}
+.navbar-row {
+  display: flex;
+  justify-content: center;  
+  margin-top: 1rem;
+}
+.navbar-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+.navbar-buttons>* {
+  margin: auto 3rem;
+}
+.glow {
+  text-shadow: 
+  0 0 1px #fff, 
+  0 0 2px #fff, 
+  0 0 3px #FFAB91, 
+  0 0 4px #FFAB91, 
+  0 0 5px #FFAB91, 
+  0 0 6px #FFAB91, 
+  0 0 7px #FFAB91;
+}
