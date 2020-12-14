@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PostDashboardComponent } from './post-dashboard.component';
+import { FormContactComponent } from './form-contact.component';
 
-describe('PostDashboardComponent', () => {
-  let component: PostDashboardComponent;
-  let fixture: ComponentFixture<PostDashboardComponent>;
+describe('FormContactComponent', () => {
+  let component: FormContactComponent;
+  let fixture: ComponentFixture<FormContactComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PostDashboardComponent ]
+      declarations: [ FormContactComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PostDashboardComponent);
+    fixture = TestBed.createComponent(FormContactComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -2,31 +2,34 @@
   flex: 1 1 auto;
 }
 .navbar {
-  font-family: 'Pathway Gothic One', sans-serif;
-  padding: 1.5rem;
+  font-family: 'Amatic SC', cursive;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  position: sticky;
 
 }
-button {
-  font-family: 'Pathway Gothic One', sans-serif;
+a, button {
+  font-family: 'Amatic SC', cursive;
   font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
 }
-button:hover {
+a:hover, button:hover {
   text-shadow: 
   0 0 1px #fff, 
   0 0 2px #fff, 
-  0 0 3px #FFAB91, 
-  0 0 4px #FFAB91, 
-  0 0 5px #FFAB91, 
-  0 0 6px #FFAB91, 
-  0 0 7px #FFAB91;
+  0 0 3px orange, 
+  0 0 4px orange, 
+  0 0 5px orange, 
+  0 0 6px orange, 
+  0 0 7px orange;
 }
 .navbar-header {
   font-size: 3rem;
+
 }
 .navbar-row {
   display: flex;
   justify-content: center;  
-  margin-top: 1rem;
 }
 .navbar-buttons {
   display: flex;
@@ -39,9 +42,13 @@ button:hover {
   text-shadow: 
   0 0 1px #fff, 
   0 0 2px #fff, 
-  0 0 3px #FFAB91, 
-  0 0 4px #FFAB91, 
-  0 0 5px #FFAB91, 
-  0 0 6px #FFAB91, 
-  0 0 7px #FFAB91;
+  0 0 3px orange, 
+  0 0 4px orange, 
+  0 0 5px orange, 
+  0 0 6px orange, 
+  0 0 7px orange;
+}
+.divider {
+  width: 60%;
+  border-bottom: 1px solid grey;
 }
