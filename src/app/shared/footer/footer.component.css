@@ -1,0 +1,27 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+}
+.footer-row {
+  display: flex;
+  justify-content: center;
+}
+.links {
+  display: flex;
+  justify-content: space-around;
+}
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.material-icons:hover {
+  text-shadow: 
+  0 0 1px #fff, 
+  0 0 2px #fff, 
+  0 0 3px orange, 
+  0 0 4px orange, 
+  0 0 5px orange, 
+  0 0 6px orange, 
+  0 0 7px orange;
+}
