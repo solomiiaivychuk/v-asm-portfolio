@@ -1,0 +1,28 @@
+.form-wrapper {
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #37474F;
+}
+form {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  color: cornsilk;
+  font-family: 'Amatic SC', cursive;
+}
+button {
+  color: black;
+  background-color: rgb(238, 191, 91);
+}
+button:disabled {
+  color: rgb(105, 101, 101);
+  background-color: rgb(224, 193, 182);
+}
+input {
+  color: cornsilk;
+}
+mat-label {
+  color: cornsilk;
+}
