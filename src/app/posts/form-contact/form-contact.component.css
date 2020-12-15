@@ -26,3 +26,21 @@ input {
 mat-label {
   color: cornsilk;
 }
+.cards-wrapper {
+  padding: 3rem;
+  background-color: #37474F;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+li {
+  list-style-type: none;
+  flex-basis: 25%;
+  margin: 1rem 2rem;
+}
+mat-card {
+  background-color: #676e72;
+  color: cornsilk;
+}

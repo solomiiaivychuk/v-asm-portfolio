@@ -11,7 +11,10 @@ import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestor
   styleUrls: ['./form-contact.component.css']
 })
 export class FormContactComponent implements OnInit {
+
   userForm: any;
+  admin: Boolean = false;
+  applications: any = [];
 
   constructor(
     public auth: AuthService, 
@@ -26,24 +29,24 @@ export class FormContactComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    // this.auth.afAuth.authState.subscribe(user => {
-    //   console.log(user?.email);
-    // });
+    this.auth.afAuth.authState.subscribe(user => {
+      console.log(user == undefined);
+    });
     this.getFirestore();
   }
 
   onSubmit() {
     if (this.userForm.dirty && this.userForm.valid) {
-      console.log(
-        `name: ${this.userForm.value.name} 
-        email: ${this.userForm.value.email} 
-        message: ${this.userForm.value.message}`
-      );
-
+        this.firestore.collection('form-applications').add({
+          name: this.userForm.value.name,
+          email: this.userForm.value.email,
+          message: this.userForm.value.message,
+          published: Date.now()
+        }).then(res => console.log('success', res));
     }
   }
   getFirestore() {
-    const apps = this.firestore.collection('form-applications').doc('0G5fegzcPkEgFDihTmgy');
-    apps.get().subscribe(doc => console.log(doc.data()));
+    const apps = this.firestore.collection('form-applications');
+    apps.get().subscribe(docs => docs.forEach(doc => this.applications.push(doc.data())));
   }
 }

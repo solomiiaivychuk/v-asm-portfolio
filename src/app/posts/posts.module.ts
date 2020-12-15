@@ -4,6 +4,7 @@ import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
 import { PostService } from './post.service';
 import { PostPeopleComponent } from './post-people/post-people.component';
 import { PostPlacesComponent } from './post-places/post-places.component';
@@ -30,12 +31,14 @@ const routes: Routes = [
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatCardModule,
   ],
   exports: [
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatCardModule,
   ],
   providers: [PostService],
 })
