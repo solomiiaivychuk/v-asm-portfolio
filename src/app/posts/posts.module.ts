@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
 import { PostService } from './post.service';
 import { PostPeopleComponent } from './post-people/post-people.component';
 import { PostPlacesComponent } from './post-places/post-places.component';
@@ -32,6 +33,7 @@ const routes: Routes = [
     MatFormFieldModule,
     MatInputModule,
     MatCardModule,
+    MatGridListModule,
   ],
   exports: [
     FormsModule,
@@ -39,6 +41,7 @@ const routes: Routes = [
     MatFormFieldModule,
     MatInputModule,
     MatCardModule,
+    MatGridListModule,
   ],
   providers: [PostService],
 })

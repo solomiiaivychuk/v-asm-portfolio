@@ -1,10 +1,11 @@
 <div *ngIf="auth.afAuth.authState | async as user; else showForm" class="cards-wrapper">
   <ul>
     <li *ngFor="let application of applications; let i = index;">
-      <mat-card>
+      <mat-card *ngIf="application">
         <mat-card-content>
           <p>
-            <b>name:</b> {{application.name}}
+            <b>name:</b>
+            {{application.name}}
           </p>
           <p>
             <b>published at:</b> {{application.published | date:'medium'}}
