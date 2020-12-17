@@ -29,10 +29,10 @@ export class FormContactComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.auth.afAuth.authState.subscribe(user => {
-      console.log(user == undefined);
-    });
-    this.getFirestore();
+    //this.auth.afAuth.authState.subscribe(user => {
+    //  console.log(user == undefined);
+    //});
+    //this.getFirestore();
   }
 
   onSubmit() {

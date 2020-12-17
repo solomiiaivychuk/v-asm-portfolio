@@ -1,0 +1,7 @@
+.photos-wrapper {
+  background-color: #37474F;
+  padding: 3rem;
+}
+.img-container {
+  object-fit: cover;
+}

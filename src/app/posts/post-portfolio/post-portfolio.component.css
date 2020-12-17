@@ -1,9 +1,9 @@
 .photos-wrapper {
   background-color: #37474F;
-  padding: 3rem;
+  padding: 3rem 3rem 1rem 3rem;
 }
 .img-container {
   object-fit: cover;
-  }
-
-
+}
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
