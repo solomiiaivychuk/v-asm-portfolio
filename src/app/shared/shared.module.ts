@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [NavbarComponent, FooterComponent],
@@ -11,6 +13,8 @@ import { FooterComponent } from './footer/footer.component';
     CommonModule,
     RouterModule,
     MaterialModule,
+    MatFormFieldModule,
+    MatSelectModule,
   ],
   exports: [
     CommonModule,
@@ -18,6 +22,8 @@ import { FooterComponent } from './footer/footer.component';
     MaterialModule,
     NavbarComponent,
     FooterComponent,
+    MatFormFieldModule,
+    MatSelectModule,
   ],
 })
 export class SharedModule { }

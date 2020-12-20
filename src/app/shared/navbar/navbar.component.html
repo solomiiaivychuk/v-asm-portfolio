@@ -9,8 +9,29 @@
     <ng-template #showLogin>
       <button mat-button (click)="auth.login()">login</button>
     </ng-template>
+<!--
+    <select>
+      <option value="en">en</option>
+      <option value="pl">pl</option>
+      <option value="ru">ru</option>
+      <option value="ua">ua</option>
+    </select>
+   -->   
+
+   <span class="material-icons" style="margin-right: 1rem;">
+    language
+    </span>
+
+    <mat-form-field appearance="outline" style="font-size: 0.8rem; width: 70px;">
+      <mat-select>
+        <mat-option value="en">en</mat-option>
+        <mat-option value="pl">pl</mat-option>
+        <mat-option value="ru">ru</mat-option>
+        <mat-option value="ua">ua</mat-option>
+      </mat-select>
+    </mat-form-field>
+
   </mat-toolbar-row>
-<!---->
 
   <mat-toolbar-row class="navbar-row">
     <div class="navbar-buttons">

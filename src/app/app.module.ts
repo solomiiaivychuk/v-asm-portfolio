@@ -3,6 +3,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { AngularFireModule } from '@angular/fire';
@@ -38,7 +43,15 @@ const routes: Routes = [
     AngularFirestoreModule,
     AngularFireStorageModule,
     AppRoutingModule,
+    HttpClientModule,
     CoreModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoader,
+        deps: [HttpClient]
+      }
+    }),
     SharedModule,
     PostsModule,
   ],
@@ -46,3 +59,7 @@ const routes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function httpTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}

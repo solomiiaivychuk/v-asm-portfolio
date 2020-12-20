@@ -1,0 +1,14 @@
+{
+  "navbar-main-header": "portfolio by vitalii asmakovskyi",
+  "navbar-portfolio": "portfolio",
+  "navbar-people": "ludzie",
+  "navbar-places": "miejsca",
+  "navbar-contact-me": "kontakt",
+  "navbar-login": "zaloguj się",
+  "navbar-logout": "wyloguj się",
+  "navbar-welcome": "witaj",
+  "form-name": "imię",
+  "form-email": "email",
+  "form-message": "wiadomość",
+  "form-submit": "zatwierdź"
+}
