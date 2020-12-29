@@ -6,11 +6,14 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 import { PostService } from './post.service';
 import { PostPeopleComponent } from './post-people/post-people.component';
 import { PostPlacesComponent } from './post-places/post-places.component';
 import { PostPortfolioComponent } from './post-portfolio/post-portfolio.component';
 import { FormContactComponent } from './form-contact/form-contact.component';
+import { PhotoComponent } from './photo/photo.component';
 
 const routes: Routes = [
   { path: 'portfolio', component: PostPortfolioComponent },
@@ -24,6 +27,7 @@ const routes: Routes = [
     PostPlacesComponent,
     PostPortfolioComponent,
     FormContactComponent,
+    PhotoComponent,
   ],
   imports: [
     SharedModule, 
@@ -34,6 +38,7 @@ const routes: Routes = [
     MatInputModule,
     MatCardModule,
     MatGridListModule,
+    MatSnackBarModule
   ],
   exports: [
     FormsModule,
@@ -42,6 +47,7 @@ const routes: Routes = [
     MatInputModule,
     MatCardModule,
     MatGridListModule,
+    MatSnackBarModule
   ],
   providers: [PostService],
 })

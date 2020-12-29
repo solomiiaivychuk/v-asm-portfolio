@@ -1,0 +1,13 @@
+mat-dialog-container {
+  padding: 0;
+  background-color: #37474F;
+}
+.form-wrapper {
+  padding: 2rem;
+  width: 500px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Amatic SC', cursive;
+}

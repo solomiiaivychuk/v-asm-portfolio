@@ -1,40 +1,7 @@
 <div class="photos-wrapper">
-  
-  <mat-grid-list cols="5" rowHeight="2:3"  gutterSize="30px">
-    <mat-grid-tile [colspan]="3" [rowspan]="1">
-      <div class="img-container grow">
-        <img src="../../../assets/images/portfolio/port-hor-002.jpg"/>
-      </div>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="2" [rowspan]="2">
-      <div class="img-container grow">
-        <img src="../../../assets/images/portfolio/port-ver-002.jpg" />
-      </div>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="3" [rowspan]="1">
-      <div class="img-container grow">
-        <img src="../../../assets/images/portfolio/port-hor-001.jpg" />
-      </div>
-    </mat-grid-tile>
-  </mat-grid-list>
-</div>
+  <div *ngIf="storageImages">
+      <img id="myimg">
+  <div *ngIf="!storageImages">
 
-<div class="photos-wrapper">
-  <mat-grid-list cols="5" rowHeight="2:3" gutterSize="30px">
-    <mat-grid-tile [colspan]="2" [rowspan]="2">
-      <div class="img-container grow">
-        <img src="../../../assets/images/portfolio/port-ver-001.jpg" />
-      </div>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="3" [rowspan]="1">
-      <div class="img-container grow">
-        <img src="../../../assets/images/portfolio/port-hor-003.jpg" />
-      </div>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="3" [rowspan]="1">
-      <div class="img-container grow">
-        <img src="../../../assets/images/portfolio/port-hor-004.jpg" />
-      </div>
-    </mat-grid-tile>
-  </mat-grid-list>
+  </div>
 </div>

@@ -4,6 +4,8 @@ import { AuthService } from '../../core/auth.service';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
+import {MatDialog} from '@angular/material/dialog';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-form-contact',
@@ -20,6 +22,8 @@ export class FormContactComponent implements OnInit {
     public auth: AuthService, 
     private formBuilder: FormBuilder,
     private firestore: AngularFirestore,
+    public dialog: MatDialog,
+    private snack: MatSnackBar,
     ) {
     this.userForm = this.formBuilder.group({
       name: ['', Validators.required],
@@ -42,7 +46,11 @@ export class FormContactComponent implements OnInit {
           email: this.userForm.value.email,
           message: this.userForm.value.message,
           published: Date.now()
-        }).then(res => console.log('success', res));
+        }).then(res => {
+            console.log('success', res);
+            this.userForm.reset();
+            this.snack.open('Thank you for contacting!', 'close');
+          });
     }
   }
   getFirestore() {

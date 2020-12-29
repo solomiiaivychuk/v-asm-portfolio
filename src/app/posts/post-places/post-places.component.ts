@@ -12,4 +12,5 @@ export class PostPlacesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
 }

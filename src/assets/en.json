@@ -10,5 +10,9 @@
   "form-name": "name",
   "form-email": "email",
   "form-message": "message",
-  "form-submit": "submit"
+  "form-submit": "submit",
+  "form-snack-success": "Thank you for contacting!",
+  "login-snack-success": "Logged in successfully",
+  "login-snack-error": "Oops! User with the provided email does not exist!",
+  "close": "close"
 }

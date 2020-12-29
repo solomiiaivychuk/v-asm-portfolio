@@ -4,18 +4,22 @@ import {
   AngularFirestoreCollection, 
   AngularFirestoreDocument
 } from '@angular/fire/firestore';
-import { Post } from './post'
+import {AngularFireDatabase} from '@angular/fire/database';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
 
-  postsCollection!: AngularFirestoreCollection<Post>;
-
   constructor(
     private afs: AngularFirestore,
+    private realtime: AngularFireDatabase
   ) {
-    this.postsCollection = this.afs.collection('posts', ref => ref.orderBy('published', 'desc'));
+
    }
+
+  getPortfolioImages() {
+    return this.realtime.list('portfolio').valueChanges();
+    //return this.afs.collection("portfolio", ref => ref.limit(100)).get().toPromise();
+  }
 }

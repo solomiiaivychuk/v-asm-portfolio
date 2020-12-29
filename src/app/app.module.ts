@@ -14,6 +14,9 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostsModule } from './posts/posts.module';
@@ -44,6 +47,7 @@ const routes: Routes = [
     AngularFireStorageModule,
     AppRoutingModule,
     HttpClientModule,
+    MatSnackBarModule,
     CoreModule,
     TranslateModule.forRoot({
       loader: {
