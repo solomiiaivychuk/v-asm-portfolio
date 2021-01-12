@@ -3,12 +3,12 @@
   "navbar-portfolio": "портфолио",
   "navbar-people": "люди",
   "navbar-places": "места",
-  "navbar-contact-me": "контак",
+  "navbar-contact-me": "контакт",
   "navbar-login": "войти",
   "navbar-logout": "выйти",
   "navbar-welcome": "приветствую",
   "form-name": "имя",
   "form-email": "электронная почта",
   "form-message": "сообщение",
-  "form-submit": "submit"
+  "form-submit": "отправить"
 }

@@ -1,13 +1,16 @@
 <mat-toolbar color="primary" class="navbar">
   <mat-toolbar-row>
+    <!--
     <span class="navbar-header glow">photos by vitalii asmakovskyi</span>
+    -->
+    <span class="navbar-header glow">{{ "navbar-main-header" | translate }}</span>
     <span class="spacer"></span>
     <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
-      <span>welcome back, {{user.displayName | lowercase }}</span>
-      <button mat-button (click)="auth.logout()">logout</button>
+      <span>{{ 'navbar-welcome' | translate }} {{user.displayName }}</span>
+      <button mat-button (click)="auth.logout()">{{ 'navbar-logout' | translate }}</button>
     </div>
     <ng-template #showLogin>
-      <button mat-button (click)="openDialog()">login</button>
+      <button mat-button (click)="openDialog()">{{ 'navbar-login' | translate }}</button>
     </ng-template>
 <!--
     <select>
@@ -22,23 +25,39 @@
     language
     </span>
 
+    <!--
     <mat-form-field appearance="outline" style="font-size: 0.8rem; width: 70px;">
-      <mat-select>
-        <mat-option value="en">en</mat-option>
-        <mat-option value="pl">pl</mat-option>
-        <mat-option value="ru">ru</mat-option>
-        <mat-option value="ua">ua</mat-option>
-      </mat-select>
-    </mat-form-field>
+
+    -->
+      <select #selectedLang (change)="switchLang(selectedLang.value)">
+        <!--
+        <option mat-option 
+          *ngFor="let language of translate.getLangs()"
+          [value]="language"
+          [selected]="language === translate.currentLang"
+          >
+          {{language}}
+        </option>
+        -->
+        <option value="en">en</option>
+        <option value="pl">pl</option>
+        <option value="ru">ru</option>
+        <option value="ua">ua</option>
+        
+      </select>
+      <!--
+
+      </mat-form-field>
+      -->
 
   </mat-toolbar-row>
 
   <mat-toolbar-row class="navbar-row">
     <div class="navbar-buttons">
-      <a routerLink="/portfolio">my portfolio</a>
-      <a routerLink="/people">people</a>
-      <a routerLink="/places">places</a>
-      <a routerLink="/contact">contact me</a>
+      <a routerLink="/portfolio">{{ 'navbar-portfolio' | translate }}</a>
+      <a routerLink="/people">{{ 'navbar-people' | translate }}</a>
+      <a routerLink="/places">{{ 'navbar-places' | translate }}</a>
+      <a routerLink="/contact">{{ 'navbar-contact-me' | translate }}</a>
     </div>
   </mat-toolbar-row>
 

@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
-
+import { Component, OnInit, Inject, Input, Output } from '@angular/core';
+import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 @Component({
   selector: 'app-photo',
   templateUrl: './photo.component.html',
@@ -7,12 +7,15 @@ import { Component, OnInit, Input, Output } from '@angular/core';
 })
 export class PhotoComponent implements OnInit {
 
-  @Input() thumblink!: string;
-  @Input() fulllink!: string;
+  @Input() thumb!: string;
+  @Input() full!: string;
+  @Inject(MAT_DIALOG_DATA) public data!: any;
+  public path = this.data.fullPath;
 
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

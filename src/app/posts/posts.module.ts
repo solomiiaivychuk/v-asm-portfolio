@@ -7,6 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { PostService } from './post.service';
 import { PostPeopleComponent } from './post-people/post-people.component';
@@ -15,6 +16,7 @@ import { PostPortfolioComponent } from './post-portfolio/post-portfolio.componen
 import { FormContactComponent } from './form-contact/form-contact.component';
 import { PhotoComponent } from './photo/photo.component';
 
+import { TranslateModule } from '@ngx-translate/core';
 const routes: Routes = [
   { path: 'portfolio', component: PostPortfolioComponent },
   { path: 'people', component: PostPeopleComponent },
@@ -38,7 +40,9 @@ const routes: Routes = [
     MatInputModule,
     MatCardModule,
     MatGridListModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule,
+    TranslateModule
   ],
   exports: [
     FormsModule,
@@ -47,7 +51,9 @@ const routes: Routes = [
     MatInputModule,
     MatCardModule,
     MatGridListModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule,
+    TranslateModule
   ],
   providers: [PostService],
 })

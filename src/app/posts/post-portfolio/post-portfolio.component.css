@@ -1,9 +1,22 @@
+.wrapper {
+  background-color: #37474F;
+  padding-top: 2rem;
+}
 .photos-wrapper {
   background-color: #37474F;
-  padding: 3rem 3rem 1rem 3rem;
-}
-.img-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  margin: 0 auto;
+  max-width: 95%;
   object-fit: cover;
+}
+.container {
+  margin: 10px auto;
+}
+img {
+  width: 100%;
 }
 .grow { transition: all .2s ease-in-out; }
 .grow:hover { transform: scale(1.1); }

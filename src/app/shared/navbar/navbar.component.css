@@ -29,8 +29,12 @@ a:hover, button:hover {
   justify-content: center;  
 }
 .navbar-buttons {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  margin: 0 auto;
+  max-width: 60%;
 }
 .navbar-buttons>* {
   margin: auto 3rem;

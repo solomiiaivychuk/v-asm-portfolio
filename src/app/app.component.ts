@@ -12,4 +12,7 @@ export class AppComponent {
     translate.addLangs(['en', 'ru', 'pl', 'ua']);
     translate.setDefaultLang('en');
   }
+  switchLang(lang: string) {
+    this.translate.use(lang);
+  }
 }
