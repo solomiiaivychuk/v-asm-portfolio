@@ -53,7 +53,8 @@ const routes: Routes = [
     MatGridListModule,
     MatSnackBarModule,
     MatDialogModule,
-    TranslateModule
+    TranslateModule,
+    RouterModule,
   ],
   providers: [PostService],
 })

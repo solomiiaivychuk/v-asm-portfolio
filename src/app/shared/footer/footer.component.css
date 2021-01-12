@@ -1,5 +1,6 @@
 .footer {
   bottom: 0;
+  position: relative;
 }
 .footer-row {
   display: flex;

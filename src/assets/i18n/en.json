@@ -14,5 +14,10 @@
   "form-snack-success": "Thank you for contacting!",
   "login-snack-success": "Logged in successfully",
   "login-snack-error": "Oops! User with the provided email does not exist!",
-  "close": "close"
+  "close": "close",
+  "hello-friend": "hello, friend",
+  "my-name-is": "my name is vitalii and i am a photographer-beginner",
+  "i-love-photos": "i love atmoshperic photos, portraits and cats (:",
+  "i-am-based": "i am based in kostrzyn nad ordą, poland",
+  "lets-contact": "let's get in contact "
 }
