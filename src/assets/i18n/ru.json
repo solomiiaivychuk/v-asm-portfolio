@@ -3,7 +3,7 @@
   "navbar-portfolio": "портфолио",
   "navbar-people": "люди",
   "navbar-places": "места",
-  "navbar-contact-me": "контакт",
+  "navbar-contact-me": "связаться",
   "navbar-login": "войти",
   "navbar-logout": "выйти",
   "navbar-welcome": "приветствую",
@@ -11,6 +11,11 @@
   "form-email": "электронная почта",
   "form-message": "сообщение",
   "form-submit": "отправить",
+  "applications-sent-by-users": "applications that have been submitted by users",
+  "application-name": "имя отправителя",
+  "application-email": "электронная пошта отправителя",
+  "application-date": "дата",
+  "application-message": "сообщение",
   "form-snack-success": "Спасибо!",
   "login-snack-success": "Вход выполен успешно",
   "login-snack-error": "Ой! Пользователь с указанным адресом электронной почты не существует!",
@@ -19,5 +24,6 @@
   "my-name-is": "меня зовут виталий и я начинающий фотограф",
   "i-love-photos": "я люблю атмосферные фото, портреты и котиков (:",
   "i-am-based": "я живу и работаю в польше, костшине над одрой",
-  "lets-contact": "давай дружить "
+  "lets-contact": "давай дружить ",
+  "select-language": "Выбрать язык"
 }

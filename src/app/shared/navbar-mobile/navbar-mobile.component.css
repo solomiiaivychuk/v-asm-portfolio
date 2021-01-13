@@ -1,0 +1,41 @@
+.navbar-header {
+  font-family: 'Amatic SC', cursive;
+  font-size: 2rem;
+  text-align: center;
+}
+mat-toolbar-row {
+  display: flex;
+  justify-content: center;
+}
+.navbar-buttons {
+  text-align: center;
+  display: flex;
+  flex-basis: 90%;
+  justify-content: space-between;
+}
+a {
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+a:hover {
+  text-shadow: 
+  0 0 1px #fff, 
+  0 0 2px #fff, 
+  0 0 3px orange, 
+  0 0 4px orange, 
+  0 0 5px orange, 
+  0 0 6px orange, 
+  0 0 7px orange;
+}
+.glow {
+  text-shadow: 
+  0 0 1px #fff, 
+  0 0 2px #fff, 
+  0 0 3px orange, 
+  0 0 4px orange, 
+  0 0 5px orange, 
+  0 0 6px orange, 
+  0 0 7px orange;
+}

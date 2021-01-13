@@ -12,6 +12,32 @@
   max-width: 80%;
   object-fit: cover;
 }
+.intro {
+  font-family: 'Amatic SC', cursive;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  color:white;
+  text-align: center;
+}
+@media only screen and (max-width: 599px) {
+  .photos-wrapper {
+    background-color: #37474F;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    margin: 0 auto;
+    max-width: 80%;
+    object-fit: cover;
+  }
+  .intro {
+    font-family: 'Amatic SC', cursive;
+    font-size: 2rem;
+    line-height: 2rem;
+    color:white;
+    text-align: center;
+  }
+}
 .container {
   margin: 10px auto;
 }
@@ -21,13 +47,7 @@ img {
 .grow { transition: all .2s ease-in-out; }
 .grow:hover { transform: scale(1.1); }
 
-.intro {
-  font-family: 'Amatic SC', cursive;
-  font-size: 3rem;
-  line-height: 3.5rem;
-  color:white;
-  text-align: center;
-}
+
 .text {
   display: flex;
   flex-wrap: wrap;

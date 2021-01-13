@@ -11,6 +11,11 @@
   "form-email": "email",
   "form-message": "message",
   "form-submit": "submit",
+  "applications-sent-by-users": "applications that have been submitted by users",
+  "application-name": "title",
+  "application-email": "sender's email",
+  "application-date": "date",
+  "application-message": "message",
   "form-snack-success": "Thank you for contacting!",
   "login-snack-success": "Logged in successfully",
   "login-snack-error": "Oops! User with the provided email does not exist!",
@@ -19,5 +24,6 @@
   "my-name-is": "my name is vitalii and i am a photographer-beginner",
   "i-love-photos": "i love atmoshperic photos, portraits and cats (:",
   "i-am-based": "i am based in kostrzyn nad ordą, poland",
-  "lets-contact": "let's get in contact "
+  "lets-contact": "let's get in contact ",
+  "select-language": "Select language"
 }

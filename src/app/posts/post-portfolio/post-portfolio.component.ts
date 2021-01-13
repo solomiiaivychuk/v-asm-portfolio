@@ -20,17 +20,9 @@ export class PostPortfolioComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.postService.getPortfolioImages().subscribe((res) => {
-      const result = res as any;
-      for (let record of result) {
-        this.portfolioImages.push(record);
-        this.storageImages.push({
-          full: this.storage.refFromURL(record.full),
-          thumb: this.storage.refFromURL(record.thumb)
-        });
-        console.log(this.storageImages);
-      }
-    });
+    navigator.geolocation.getCurrentPosition((position) => {
+      console.log(position);
+    })
   }
 
   openDialog(path: any) {

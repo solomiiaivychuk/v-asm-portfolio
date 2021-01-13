@@ -1,20 +1,28 @@
-<div *ngIf="auth.afAuth.authState | async as user; else showForm" class="cards-wrapper">
+<div
+  *ngIf="auth.afAuth.authState | async as user; else showForm"
+  class="cards-wrapper"
+>
+  <div>
+    <h2>{{ "applications-sent-by-users" | translate }}</h2>
+  </div>
   <ul>
-    <li *ngFor="let application of applications; let i = index;">
+    <li *ngFor="let application of applications; let i = index">
       <mat-card *ngIf="application">
         <mat-card-content>
           <p>
-            <b>name:</b>
-            {{application.name}}
+            <b>{{ "application-name" | translate }}</b>
+            {{ application.name }}
           </p>
           <p>
-            <b>published at:</b> {{application.published | date:'medium'}}
+            <b>{{ "application-date" | translate }}</b>
+            {{ application.published | date: "medium" }}
           </p>
           <p>
-            <b>email:</b> {{application.email}}
+            <b>{{ "application-email" | translate }}</b> {{ application.email }}
           </p>
           <p>
-            {{application.message}}
+            <b>{{ "application-message" | translate }}</b>
+            {{ application.message }}
           </p>
         </mat-card-content>
       </mat-card>
@@ -23,25 +31,33 @@
 </div>
 
 <ng-template #showForm>
-<div class="form-wrapper">
-  <form [formGroup]="userForm" (submit)="onSubmit()">
-    <mat-form-field appearance="fill">
-      <mat-label>{{ 'form-name' | translate }}</mat-label>
-      <input matInput formControlName="name" id="name"/>
-      
-    </mat-form-field>
+  <div class="form-wrapper">
+    <form [formGroup]="userForm" (submit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>{{ "form-name" | translate }}</mat-label>
+        <input matInput formControlName="name" id="name" />
+      </mat-form-field>
 
-    <mat-form-field appearance="fill">
-      <mat-label>{{ 'form-email' | translate }}</mat-label>
-      <input matInput formControlName="email" type="email" id="email" ngModel email="true"/>
-    </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>{{ "form-email" | translate }}</mat-label>
+        <input
+          matInput
+          formControlName="email"
+          type="email"
+          id="email"
+          ngModel
+          email="true"
+        />
+      </mat-form-field>
 
-    <mat-form-field appearance="fill">
-      <mat-label>{{ 'form-message' | translate }}</mat-label>
-      <textarea matInput formControlName="message" id="message"></textarea>
-    </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>{{ "form-message" | translate }}</mat-label>
+        <textarea matInput formControlName="message" id="message"></textarea>
+      </mat-form-field>
 
-    <button mat-button type="submit" [disabled]="!userForm.valid">{{ 'form-submit' | translate }}</button>
-  </form>
-</div>
+      <button mat-button type="submit" [disabled]="!userForm.valid">
+        {{ "form-submit" | translate }}
+      </button>
+    </form>
+  </div>
 </ng-template>

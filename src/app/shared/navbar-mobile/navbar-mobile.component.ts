@@ -3,15 +3,13 @@ import { AuthService } from '../../core/auth.service';
 import {MatDialog} from '@angular/material/dialog';
 import {LoginDialogComponent} from '../login-dialog/login-dialog.component';
 import { TranslateService } from '@ngx-translate/core';
-import {LanguageDialogComponent} from '../language-dialog/language-dialog.component';
-@Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
-})
-export class NavbarComponent implements OnInit {
 
-  public showDropdown: boolean = false;
+@Component({
+  selector: 'app-navbar-mobile',
+  templateUrl: './navbar-mobile.component.html',
+  styleUrls: ['./navbar-mobile.component.css']
+})
+export class NavbarMobileComponent implements OnInit {
 
   constructor(
     public auth: AuthService, 
@@ -25,14 +23,13 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openLoginDialog() {
+  openDialog() {
     this.dialog.open(LoginDialogComponent);
   }
-  openLanguageDialog() {
-    this.dialog.open(LanguageDialogComponent );
-  }
+
   switchLang(lang: string) {
     console.log(lang);
     this.translate.use(lang);
   }
 }
+

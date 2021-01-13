@@ -8,7 +8,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { PostService } from './post.service';
 import { PostPeopleComponent } from './post-people/post-people.component';
 import { PostPlacesComponent } from './post-places/post-places.component';
@@ -42,7 +42,8 @@ const routes: Routes = [
     MatGridListModule,
     MatSnackBarModule,
     MatDialogModule,
-    TranslateModule
+    TranslateModule,
+    FlexLayoutModule
   ],
   exports: [
     FormsModule,
@@ -55,6 +56,7 @@ const routes: Routes = [
     MatDialogModule,
     TranslateModule,
     RouterModule,
+    FlexLayoutModule
   ],
   providers: [PostService],
 })

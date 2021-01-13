@@ -11,6 +11,11 @@
   "form-email": "email",
   "form-message": "wiadomość",
   "form-submit": "zatwierdź",
+  "applications-sent-by-users": "applications that have been submitted by users",
+  "application-name": "imię",
+  "application-email": "email",
+  "application-date": "data",
+  "application-message": "wiadomość",
   "form-snack-success": "Dziękuję!",
   "login-snack-success": "Logged in successfully",
   "login-snack-error": "użytkownik nie istneje",
@@ -19,5 +24,6 @@
   "my-name-is": "mam na imię wilalii i jestem początkującym fotografem",
   "i-love-photos": "kocham atmosferyczne zdjęcia, portrety i koty (:",
   "i-am-based": "mieszkam w kostrzynie nad ordą",
-  "lets-contact": "skontaktujmy się "
+  "lets-contact": "skontaktujmy się ",
+  "select-language": "Select language"
 }

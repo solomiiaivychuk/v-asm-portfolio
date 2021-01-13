@@ -7,16 +7,16 @@ import { AppComponent } from './app.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
-
+import {LayoutModule} from '@angular/cdk/layout';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-
+import { MatRadioModule } from '@angular/material/radio';
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostsModule } from './posts/posts.module';
@@ -58,6 +58,9 @@ const routes: Routes = [
     }),
     SharedModule,
     PostsModule,
+    FlexLayoutModule,
+    LayoutModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

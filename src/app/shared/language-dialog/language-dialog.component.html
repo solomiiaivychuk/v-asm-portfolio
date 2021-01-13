@@ -1,0 +1,9 @@
+<div class="radio-menu">
+  <label>{{ 'select-language' | translate }}</label>
+  <mat-radio-group #selectedLang class="radio-buttons">
+    <mat-radio-button value="en" (change)="switchLang('en')">English</mat-radio-button>
+    <mat-radio-button value="pl" (change)="switchLang('pl')">Polski</mat-radio-button>
+    <mat-radio-button value="ua" (change)="switchLang('ua')">Українська </mat-radio-button>
+    <mat-radio-button value="ru" (change)="switchLang('ru')">Русский</mat-radio-button>
+  </mat-radio-group>
+</div>

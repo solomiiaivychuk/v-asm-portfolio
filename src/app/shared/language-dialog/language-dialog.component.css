@@ -1,0 +1,17 @@
+
+.radio-menu, .radio-buttons {
+  display: flex;
+  flex-direction: column;
+
+}
+label {
+  margin-bottom: 1rem;
+}
+.radio-menu {
+  width: 300px;
+  height: 30vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}

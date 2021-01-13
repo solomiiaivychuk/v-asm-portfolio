@@ -12,6 +12,13 @@ form {
   color: cornsilk;
   font-family: 'Amatic SC', cursive;
 }
+@media only screen and (max-width: 1024px) {
+  form {
+    display: flex;
+    flex-basis: 90%;
+    height: 72vh;
+  }
+}
 button {
   color: black;
   background-color: rgb(238, 191, 91);
@@ -31,16 +38,23 @@ mat-label {
   background-color: #37474F;
 }
 ul {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  margin: 0 auto;
+  max-width: 80%;
   
 }
 li {
   list-style-type: none;
-  flex-basis: 25%;
-  margin: 1rem 2rem;
 }
 mat-card {
   background-color: #676e72;
   color: cornsilk;
+}
+h2 {
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+  color: white;
 }

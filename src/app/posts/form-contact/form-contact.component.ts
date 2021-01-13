@@ -36,7 +36,7 @@ export class FormContactComponent implements OnInit {
     //this.auth.afAuth.authState.subscribe(user => {
     //  console.log(user == undefined);
     //});
-    //this.getFirestore();
+    this.getFirestoreMessages();
   }
 
   onSubmit() {
@@ -53,7 +53,7 @@ export class FormContactComponent implements OnInit {
           });
     }
   }
-  getFirestore() {
+  getFirestoreMessages() {
     const apps = this.firestore.collection('form-applications');
     apps.get().subscribe(docs => docs.forEach(doc => this.applications.push(doc.data())));
   }

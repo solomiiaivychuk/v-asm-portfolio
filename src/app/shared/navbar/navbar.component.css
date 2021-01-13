@@ -1,9 +1,38 @@
-.spacer {
-  flex: 1 1 auto;
-}
 .navbar {
   font-family: 'Amatic SC', cursive;
   padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.row {
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.row-menu {
+  display: flex;
+  align-items: center;
+}
+.login-button {
+  background-color: transparent;
+  border: transparent;
+  outline: transparent;
+  padding: 0;
+  margin: 0;
+}
+.language-button {
+  background-color: transparent;
+  border: transparent;
+  outline: transparent;
+  padding: 0;
+  margin: 0;
+}
+select {
+  margin: auto 1rem;
+  outline: transparent;
+  color: white;
+  background-color: #37474F;
+  border:transparent;
 }
 a, button {
   font-family: 'Amatic SC', cursive;
@@ -23,7 +52,10 @@ a:hover, button:hover {
 }
 .navbar-header {
   font-size: 3rem;
+  display: flex;
+  flex-wrap:wrap;
 }
+
 .navbar-row {
   display: flex;
   justify-content: center;  
@@ -36,9 +68,6 @@ a:hover, button:hover {
   grid-gap: 10px;
   margin: 0 auto;
 }
-.navbar-buttons>* {
-  margin: auto 3rem;
-}
 .glow {
   text-shadow: 
   0 0 1px #fff, 
@@ -49,7 +78,43 @@ a:hover, button:hover {
   0 0 6px orange, 
   0 0 7px orange;
 }
-.divider {
-  width: 60%;
-  border-bottom: 1px solid grey;
+@media only screen and (min-width: 600px) {
+  .mobile-row-menu {
+    visibility: hidden;
+  }
+  .language-button {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .navbar-header {
+    font-family: 'Amatic SC', cursive;
+    font-size: 2.5rem;
+  }
+  mat-toolbar-row {
+    display: flex;
+    justify-content: center;
+  }
+  .navbar-buttons {
+    text-align: center;
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+  }
+  a {
+    font-family: 'Amatic SC', cursive;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+  }
+  .navbar-buttons>* {
+    margin: auto;
+  }
+  .row-menu {
+    visibility: hidden;
+  }
+  .mobile-row-menu {
+    display: flex;
+  }
 }

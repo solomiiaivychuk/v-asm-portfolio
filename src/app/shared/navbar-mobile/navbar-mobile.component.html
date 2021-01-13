@@ -1,0 +1,36 @@
+<mat-toolbar color="primary" class="navbar">
+  <mat-toolbar-row>
+    <p class="navbar-header glow">{{
+      "navbar-main-header" | translate
+      }}
+    </p>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <div class="navbar-buttons">
+      <a routerLink="/portfolio">{{ "navbar-portfolio" | translate }}</a>
+      <a routerLink="/people">{{ "navbar-people" | translate }}</a>
+      <a routerLink="/places">{{ "navbar-places" | translate }}</a>
+      <a routerLink="/contact">{{ "navbar-contact-me" | translate }}</a>
+    </div>
+<!--
+        <span class="material-icons"> language </span>
+          <select #selectedLang (change)="switchLang(selectedLang.value)">
+            <option value="en">en</option>
+            <option value="pl">pl</option>
+            <option value="ru">ru</option>
+            <option value="ua">ua</option>
+          </select>
+
+
+        <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
+          <span class="material-icons" (click)="auth.logout()"> login </span>
+        </div>
+        <ng-template #showLogin>
+          <span class="material-icons" (click)="openDialog()">
+            account_circle
+          </span>
+        </ng-template>
+-->
+  </mat-toolbar-row>
+</mat-toolbar>
+

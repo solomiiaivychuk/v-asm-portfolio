@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,12 +8,23 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   
+  
+  constructor(
+    public translate: TranslateService, 
+    public breakpointObserver: BreakpointObserver
+    ) {
+      translate.addLangs(['en', 'ru', 'pl', 'ua']);
+      translate.setDefaultLang('en');
+    }
 
-  constructor(public translate: TranslateService) {
-    translate.addLangs(['en', 'ru', 'pl', 'ua']);
-    translate.setDefaultLang('en');
-  }
-  switchLang(lang: string) {
+    public isSmallScreen!: any;
+
+    ngOnInit(): void {
+      this.isSmallScreen = this.breakpointObserver.isMatched('(max-width: 599px)');
+    }
+
+    switchLang(lang: string) {
     this.translate.use(lang);
   }
+
 }

@@ -12,6 +12,18 @@
   max-width: 95%;
   object-fit: cover;
 }
+@media only screen and (max-width: 599px) {
+  .photos-wrapper {
+    background-color: #37474F;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    margin: 0 auto;
+    max-width: 80%;
+    object-fit: cover;
+  }
+}
 .container {
   margin: 10px auto;
 }

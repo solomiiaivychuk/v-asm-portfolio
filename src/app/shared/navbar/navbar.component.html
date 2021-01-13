@@ -1,64 +1,45 @@
 <mat-toolbar color="primary" class="navbar">
   <mat-toolbar-row>
-    <!--
-    <span class="navbar-header glow">photos by vitalii asmakovskyi</span>
-    -->
-    <span class="navbar-header glow">{{ "navbar-main-header" | translate }}</span>
-    <span class="spacer"></span>
-    <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
-      <span>{{ 'navbar-welcome' | translate }} {{user.displayName }}</span>
-      <button mat-button (click)="auth.logout()">{{ 'navbar-logout' | translate }}</button>
+    <div class="row">
+      <span class="header-row">
+        <span class="navbar-header glow">{{
+          "navbar-main-header" | translate
+        }}</span>
+      </span>
+
+      <span class="row-menu">
+        <span>
+          <select #selectedLang (change)="switchLang(selectedLang.value)">
+            <option value="en">en</option>
+            <option value="pl">pl</option>
+            <option value="ru">ru</option>
+            <option value="ua">ua</option>
+          </select>
+        </span>
+
+        <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
+          <button class="login-button" (click)="auth.logout()">
+            <span class="material-icons"> login </span>
+          </button>
+        </div>
+        <ng-template #showLogin>
+          <button class="login-button" (click)="openLoginDialog()">
+            <span class="material-icons"> account_circle </span>
+          </button>
+        </ng-template>
+      </span>
     </div>
-    <ng-template #showLogin>
-      <button mat-button (click)="openDialog()">{{ 'navbar-login' | translate }}</button>
-    </ng-template>
-<!--
-    <select>
-      <option value="en">en</option>
-      <option value="pl">pl</option>
-      <option value="ru">ru</option>
-      <option value="ua">ua</option>
-    </select>
-   -->   
-
-   <span class="material-icons" style="margin-right: 1rem;">
-    language
-    </span>
-
-    <!--
-    <mat-form-field appearance="outline" style="font-size: 0.8rem; width: 70px;">
-
-    -->
-      <select #selectedLang (change)="switchLang(selectedLang.value)">
-        <!--
-        <option mat-option 
-          *ngFor="let language of translate.getLangs()"
-          [value]="language"
-          [selected]="language === translate.currentLang"
-          >
-          {{language}}
-        </option>
-        -->
-        <option value="en">en</option>
-        <option value="pl">pl</option>
-        <option value="ru">ru</option>
-        <option value="ua">ua</option>
-        
-      </select>
-      <!--
-
-      </mat-form-field>
-      -->
-
   </mat-toolbar-row>
 
   <mat-toolbar-row class="navbar-row">
     <div class="navbar-buttons">
-      <a routerLink="/portfolio">{{ 'navbar-portfolio' | translate }}</a>
-      <a routerLink="/people">{{ 'navbar-people' | translate }}</a>
-      <a routerLink="/places">{{ 'navbar-places' | translate }}</a>
-      <a routerLink="/contact">{{ 'navbar-contact-me' | translate }}</a>
+      <a routerLink="/portfolio">{{ "navbar-portfolio" | translate }}</a>
+      <a routerLink="/people">{{ "navbar-people" | translate }}</a>
+      <a routerLink="/places">{{ "navbar-places" | translate }}</a>
+      <a routerLink="/contact">{{ "navbar-contact-me" | translate }}</a>
+      <button class="language-button" (click)="openLanguageDialog()">
+        <span class="material-icons"> language </span>
+      </button>
     </div>
   </mat-toolbar-row>
-
 </mat-toolbar>
